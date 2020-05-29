@@ -1,0 +1,63 @@
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
+.policy_info{
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.policy_info > h1{
+    justify-content: left;
+    background: #516e77;
+    padding: 6px;
+    padding-bottom: 0;
+    margin: 0;
+    color: #fafafa;
+    font-weight: 100;
+    font-size: 1.6em;
+}
+
+.policy_info > h3 {
+    margin: 0;
+    padding: 6px;
+    background: #516e77;
+    color: #cacaca;
+    font-size: 1em;
+}
+
+.policy_info > div.row > div > h4 {
+    padding: 5px;
+    color: #0d1e23;
+    border-bottom: 1px solid #0d1e23;
+    font-size: 1.3em;
+    padding-bottom: 2px;
+    margin-bottom: 8px !important;
+}
+
+.policy_info > div.row > div > div {
+    font-family: monospace;
+}
+
+.policy_info > div:not(.row) > div {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.policy_info > div:not(.row) > div > h4{
+    padding: 5px;
+    color: #0d1e23;
+    border-bottom: 1px solid #0d1e23;
+    font-size: 1.3em;
+    padding-bottom: 2px;
+    margin-bottom: 8px !important;
+    flex: 1 100%;
+}
+
+.policy_info > div:not(.row) > div > button{
+    display: block;
+    margin: 6px !important;
+}

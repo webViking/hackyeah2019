@@ -1,0 +1,28 @@
+[-] Konta ( usługowe , użytkownicy) 
+ - [?] z podziałem na funkcje(???)
+ - [-] aktualny status
+
+[ ] Polityki kontroli i audytów (Audit Policies)
+ - [ ] auditpol.exe
+ - [ ] secedit.exe
+
+[ ] Windows Firewall oraz zaawansowanych ustawień reguł zapory
+ - [ ] Stan zapory
+ - [ ] Lista reguł (dla każdego typu)
+
+[ ] Ograniczenie dostępu do urządzeń (np. USB)
+ - [ ] USB
+
+[-] System AV wraz z aktualnymi poprawkami
+ - [-] QueryAVProduct
+
+[-] Poprawki OS
+ - [-] Jako lista KB
+
+[-] Zainstalowane Aplikacje oraz uruchomione usługi
+ - [-] Aplikacje 
+ - [-] Usługi
+
+[-] Interfejsy sieciowe - konfiguracja oraz aktualny status 
+ - [-] Status
+ - [-] Konfiguracja

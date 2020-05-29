@@ -1,0 +1,3 @@
+pyravendb
+flask
+flask_cors

@@ -1,0 +1,37 @@
+version: '3.2'
+services:
+  raven-db:
+    image: ravendb/ravendb:latest
+    ports:
+      - "127.0.0.1:9090:8080"
+    volumes:
+      - "./server/data/db:/opt/RavenDB/Server/RavenData"
+      - "./server/data/config/raven-db:/opt/RavenDB/config"
+    environment:
+      RAVEN_ARGS: '--Setup.Mode=None --log-to-console'
+      RAVEN_Security_UnsecuredAccessAllowed: 'PrivateNetwork'
+      RAVEN_License_Eula_Accepted: "true"
+  server-api:
+    image: python:3.7-slim
+    network_mode: host
+    volumes:
+      - "./server:/opt/server_api"
+    environment:
+      FLASK_ENV: "development"
+      FLASK_APP: "/opt/server_api/app.py"
+      FLASK_DEBUG: "1"
+      FLASK_RUN_PORT: "8080"
+    command: >
+      bash -c "python3 -m pip install -r /opt/server_api/requirements.txt --trusted-host pypi.org --trusted-host files.pythonhosted.org && cd /opt/server_api/ &&
+      python3 -m flask run -h 0.0.0.0"
+  frontend:
+    build: "./front"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./front:/app"
+      - "./front/node_modules:/app/node_modules"
+    environment:
+      NODE_ENV: "development"
+    command: >
+      sh -c "cd /app && ls -la && yarn install && SKIP_PREFLIGHT_CHECK=true npm start"

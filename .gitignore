@@ -1,0 +1,7 @@
+workspace/
+temp/
+data/
+__pycache__/
+node_modules/
+*.log
+package-lock.json
